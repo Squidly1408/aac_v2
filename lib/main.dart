@@ -1,13 +1,8 @@
-import 'package:aac_v2/utils/user_colour_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await userColourPreferences.init();
-
   runApp(const MyApp());
 }
 
@@ -86,11 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       newColour1 = color;
     });
-   
   }
-
-
-
 
   Color subColour = const Color(0x94000000);
   Color newColour2 = const Color(0x94000000);
